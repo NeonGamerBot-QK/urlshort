@@ -8,7 +8,8 @@ import { redirect } from 'next/navigation';
 If both conditions are true, it deletes the "password" cookie. This is likely done for security
 reasons to prevent unauthorized access to the website or application. */
   if(!isLoggedIn && cookies.get("password")) {
-fetch('/api/cookie', { method: "DELETE"})
+// fetch('/api/cookie', { method: "DELETE"})
+// we fix this another day-
   }
   console.debug("logged in?", process.env.PASSWORD, cookies.get("password")?.value, isLoggedIn)
     return isLoggedIn;
